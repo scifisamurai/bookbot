@@ -1,8 +1,4 @@
-def word_count(text):
-    words = text.split()
-    num_words = len(words)
-    return num_words
-
+from stats import word_count
 
 def get_book_text(filepath):
     # f is a file object
