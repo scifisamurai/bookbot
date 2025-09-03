@@ -16,12 +16,9 @@ def sorted_character_counts(unsorted_character_counts):
         #print(f"{key}: {unsorted_character_counts[key]}")
         pairs.append({"char": key, "num": unsorted_character_counts[key]})
 
-    pairs.sort(reverse=True, key=sort_on)
+    pairs.sort(reverse=True, key=lambda items: items["num"])
 
     return pairs
-
-def sort_on(items):
-    return items["num"]
 
 def character_count(text):
     letters = {}
