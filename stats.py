@@ -12,10 +12,9 @@
 # ]
 def sorted_character_counts(unsorted_character_counts):
     pairs = []
-    # .items() returns a tuple so `pair` is a tuple
-    # https://www.w3schools.com/python/ref_dictionary_items.asp
-    for raw_pair in unsorted_character_counts.items():
-        pairs.append({"char": raw_pair[0], "num": raw_pair[1]})
+    for key in unsorted_character_counts:
+        #print(f"{key}: {unsorted_character_counts[key]}")
+        pairs.append({"char": key, "num": unsorted_character_counts[key]})
 
     pairs.sort(reverse=True, key=sort_on)
 
